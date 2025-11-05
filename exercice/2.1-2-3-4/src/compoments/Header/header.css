@@ -1,0 +1,31 @@
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  overflow: hidden; /* empêche le débordement */
+}
+
+.logo {
+  max-height: 40px; /* limite stricte */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+  .logo {
+    max-height: 30px;
+  }
+}
